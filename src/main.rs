@@ -98,7 +98,7 @@ fn main() {
 fn cargo_llvm_lines(filter_cargo: bool, sort_order: SortOrder) -> io::Result<i32> {
     // If `--filter-cargo` was specified, just filter the output and exit
     // early.
-    if filter_cargo {
+    /*if filter_cargo {
         filter_err(ignore_cargo_err);
     }
 
@@ -108,7 +108,11 @@ fn cargo_llvm_lines(filter_cargo: bool, sort_order: SortOrder) -> io::Result<i32
     let exit = run_cargo_rustc(outfile)?;
     if exit != 0 {
         return Ok(exit);
-    }
+    }*/
+
+    //let outdir = PathBuf::from("/home/julian/Rust/rustc/llvm-lines-before");
+    //let outdir = PathBuf::from("/home/julian/Rust/rustc/llvm-lines-after-stacker");
+    let outdir = PathBuf::from("/home/julian/Rust/rustc/llvm-lines-after-inline-never");
 
     let ir = read_llvm_ir(outdir)?;
     count_lines(ir, sort_order);
@@ -157,20 +161,21 @@ fn run_cargo_rustc(outfile: PathBuf) -> io::Result<i32> {
     child.wait().map(|status| status.code().unwrap_or(1))
 }
 
-fn read_llvm_ir(outdir: TempDir) -> io::Result<String> {
+fn read_llvm_ir(outdir: impl AsRef<Path>) -> io::Result<String> {
+    let mut content = String::new();
     for file in fs::read_dir(&outdir)? {
-        let path = file?.path();
+        let path = dbg!(file?.path());
         if let Some(ext) = path.extension() {
             if ext == "ll" {
-                let mut content = String::new();
                 File::open(&path)?.read_to_string(&mut content)?;
-                return Ok(content);
+                //return Ok(content);
             }
         }
     }
 
     let msg = "Ran --emit=llvm-ir but did not find output IR";
-    Err(io::Error::new(ErrorKind::Other, msg))
+    //Err(io::Error::new(ErrorKind::Other, msg))
+    Ok(content)
 }
 
 #[derive(Default)]

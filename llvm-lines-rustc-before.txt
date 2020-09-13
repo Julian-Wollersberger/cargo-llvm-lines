@@ -1,0 +1,499 @@
+  Lines            Copies        Function name
+  -----            ------        -------------
+  16894211 (100%)  58417 (100%)  (TOTAL)
+   2223855 (13.2%)   502 (0.9%)  rustc_query_system::query::plumbing::get_query_impl::{{closure}}
+   1331918 (7.9%)   1287 (2.2%)  hashbrown::raw::RawTable<T>::reserve_rehash
+    774434 (4.6%)  12043 (20.6%) core::ptr::drop_in_place
+    294170 (1.7%)    499 (0.9%)  rustc_query_system::dep_graph::graph::DepGraph<K>::with_task_impl
+    245410 (1.5%)   1552 (2.7%)  psm::on_stack::with_on_stack
+    210311 (1.2%)      1 (0.0%)  rustc_target::spec::load_specific
+    200962 (1.2%)    513 (0.9%)  rustc_query_system::query::plumbing::get_query_impl
+    190704 (1.1%)      1 (0.0%)  rustc_middle::ty::query::<impl rustc_middle::ty::context::TyCtxt>::alloc_self_profile_query_strings
+    180272 (1.1%)    468 (0.8%)  rustc_query_system::query::plumbing::load_from_disk_and_cache_in_memory
+    177396 (1.1%)    114 (0.2%)  rustc_query_system::query::plumbing::force_query_impl
+    161134 (1.0%)    445 (0.8%)  rustc_query_system::dep_graph::graph::DepGraph<K>::with_anon_task
+    141551 (0.8%)    186 (0.3%)  rustc_query_system::query::plumbing::incremental_verify_ich
+    110191 (0.7%)      7 (0.0%)  rustc_middle::ty::context::_DERIVE_rustc_serialize_Decodable_D_FOR_TypeckResults::<impl rustc_serialize::serialize::Decodable<__D> for rustc_middle::ty::context::TypeckResults>::decode::{{closure}}
+    108590 (0.6%)    420 (0.7%)  core::ops::function::FnOnce::call_once
+     88488 (0.5%)     21 (0.0%)  rustc_query_system::dep_graph::graph::DepGraph<K>::try_mark_previous_green
+     86368 (0.5%)      1 (0.0%)  rustc_middle::ty::query::stats::query_stats
+     85654 (0.5%)   3973 (6.8%)  <&T as core::fmt::Debug>::fmt
+     84475 (0.5%)      1 (0.0%)  rustc_middle::ty::query::Queries::try_collect_active_jobs
+     81220 (0.5%)    862 (1.5%)  <hashbrown::raw::RawIterHash<T> as core::iter::traits::iterator::Iterator>::next
+     77636 (0.5%)     54 (0.1%)  core::slice::sort::recurse
+     66484 (0.4%)    461 (0.8%)  <hashbrown::raw::RawIter<T> as core::iter::traits::iterator::Iterator>::next
+     58028 (0.3%)     86 (0.1%)  <core::result::Result<T,E> as rustc_middle::ty::context::InternIteratorElement<T,R>>::intern_with
+     56945 (0.3%)      1 (0.0%)  rustc_middle::ty::query::Queries::new
+     50189 (0.3%)     13 (0.0%)  rustc_mir::dataflow::framework::graphviz::BlockFormatter<A>::write_node_label
+     50040 (0.3%)      7 (0.0%)  rustc_middle::mir::_DERIVE_rustc_serialize_Decodable_D_FOR_Body::<impl rustc_serialize::serialize::Decodable<__D> for rustc_middle::mir::Body>::decode::{{closure}}
+     49841 (0.3%)     13 (0.0%)  rustc_mir::dataflow::framework::engine::write_graphviz_results
+     48033 (0.3%)    121 (0.2%)  rustc_serialize::serialize::Decoder::read_enum_variant_arg
+     47754 (0.3%)     21 (0.0%)  <rustc_middle::ty::query::Query as core::clone::Clone>::clone
+     46985 (0.3%)    273 (0.5%)  <alloc::vec::Vec<T> as alloc::vec::SpecExtend<T,I>>::spec_extend
+     44827 (0.3%)     18 (0.0%)  rustc_middle::ty::codec::<impl rustc_serialize::serialize::Decodable<D> for &rustc_middle::ty::TyS>::decode
+     44784 (0.3%)    144 (0.2%)  rustc_arena::TypedArena<T>::grow
+     43206 (0.3%)    474 (0.8%)  rustc_middle::ty::query::plumbing::<impl rustc_query_system::query::QueryContext for rustc_middle::ty::context::TyCtxt>::start_query::{{closure}}::{{closure}}::{{closure}}
+     42633 (0.3%)    141 (0.2%)  std::collections::hash::map::HashMap<K,V,S>::insert
+     40360 (0.2%)    137 (0.2%)  rustc_middle::ty::fold::TypeFoldable::fold_with
+     38615 (0.2%)    122 (0.2%)  <smallvec::SmallVec<A> as core::iter::traits::collect::Extend<<A as smallvec::Array>::Item>>::extend
+     38297 (0.2%)     31 (0.1%)  rustc_hir::intravisit::walk_expr
+     37789 (0.2%)    143 (0.2%)  <rustc_query_system::query::plumbing::JobOwner<CTX,C> as core::ops::drop::Drop>::drop
+     37680 (0.2%)      8 (0.0%)  rustc_middle::ty::print::pretty::PrettyPrinter::pretty_print_type
+     37664 (0.2%)    720 (1.2%)  hashbrown::raw::RawTable<T>::bucket
+     37177 (0.2%)     14 (0.0%)  <rustc_ast::ast::Expr as core::clone::Clone>::clone
+     35607 (0.2%)     32 (0.1%)  <rustc_ast::ast::Item<K> as core::clone::Clone>::clone
+     35563 (0.2%)     11 (0.0%)  rustc_middle::ty::print::Printer::default_print_def_path
+     35434 (0.2%)      7 (0.0%)  rustc_middle::mir::_DERIVE_rustc_serialize_Decodable_D_FOR_StatementKind::<impl rustc_serialize::serialize::Decodable<__D> for rustc_middle::mir::StatementKind>::decode::{{closure}}::{{closure}}
+     35344 (0.2%)     15 (0.0%)  rustc_middle::query::<impl rustc_query_system::query::config::QueryDescription<rustc_middle::ty::context::TyCtxt> for rustc_middle::ty::query::queries::generics_of>::try_load_from_disk
+     35263 (0.2%)     21 (0.0%)  rustc_query_system::dep_graph::graph::DepGraph<K>::emit_diagnostics
+     35245 (0.2%)     60 (0.1%)  rustc_middle::ty::structural_impls::fold_list
+     34266 (0.2%)    200 (0.3%)  <core::iter::adapters::Map<I,F> as core::iter::traits::iterator::Iterator>::next
+     31797 (0.2%)    422 (0.7%)  core::ops::function::FnOnce::call_once{{vtable.shim}}
+     31420 (0.2%)     18 (0.0%)  <datafrog::Variable<Tuple> as datafrog::VariableTrait>::changed
+     30657 (0.2%)    120 (0.2%)  std::collections::hash::map::HashMap<K,V,S>::remove
+     29105 (0.2%)     29 (0.0%)  <rustc_ast::ptr::P<T> as core::clone::Clone>::clone
+     28337 (0.2%)     21 (0.0%)  <rustc_serialize::json::Decoder as rustc_serialize::serialize::Decoder>::read_enum_variant
+     28074 (0.2%)      6 (0.0%)  rustc_middle::mir::terminator::_DERIVE_rustc_serialize_Decodable_D_FOR_TerminatorKind::<impl rustc_serialize::serialize::Decodable<__D> for rustc_middle::mir::terminator::TerminatorKind>::decode::{{closure}}::{{closure}}
+     26442 (0.2%)     63 (0.1%)  rustc_hir::intravisit::walk_ty
+     25836 (0.2%)     58 (0.1%)  <rustc_serialize::json::Decoder as rustc_serialize::serialize::Decoder>::read_struct_field
+     25809 (0.2%)     16 (0.0%)  datafrog::Relation<Tuple>::merge
+     25568 (0.2%)      6 (0.0%)  rustc_middle::ty::print::pretty::PrettyPrinter::try_print_visible_def_path_recur
+     25163 (0.1%)     99 (0.2%)  <core::iter::adapters::ResultShunt<I,E> as core::iter::traits::iterator::Iterator>::next
+     23600 (0.1%)    432 (0.7%)  rustc_data_structures::cold_path
+     23499 (0.1%)      1 (0.0%)  rustc_parse::parser::nonterminal::<impl rustc_parse::parser::Parser>::parse_nonterminal
+     23494 (0.1%)      1 (0.0%)  rustc_mir::borrow_check::do_mir_borrowck
+     22857 (0.1%)     24 (0.0%)  hashbrown::raw::inner::RawTable<T>::reserve_rehash
+     22855 (0.1%)     14 (0.0%)  rustc_ast::visit::walk_expr
+     22771 (0.1%)     45 (0.1%)  <rustc_serialize::json::Decoder as rustc_serialize::serialize::Decoder>::read_struct
+     22153 (0.1%)     96 (0.2%)  <alloc::collections::btree::map::IntoIter<K,V> as core::iter::traits::iterator::Iterator>::next
+     22058 (0.1%)      7 (0.0%)  rustc_infer::infer::canonical::query_response::<impl rustc_infer::infer::InferCtxt>::instantiate_nll_query_response_and_region_obligations
+     21421 (0.1%)      7 (0.0%)  rustc_middle::ty::print::pretty::PrettyPrinter::pretty_print_const
+     21074 (0.1%)     59 (0.1%)  <core::iter::adapters::FilterMap<I,F> as core::iter::traits::iterator::Iterator>::next
+     20990 (0.1%)      1 (0.0%)  <regex::exec::ExecNoSync as regex::re_trait::RegularExpression>::captures_read_at
+     20853 (0.1%)     17 (0.0%)  rustc_middle::ty::query::profiling_support::alloc_self_profile_query_strings_for_query_cache
+     20243 (0.1%)      3 (0.0%)  rustc_typeck::check::coercion::<impl rustc_typeck::check::FnCtxt>::try_find_coercion_lub
+     20226 (0.1%)      1 (0.0%)  <proc_macro::bridge::server::Dispatcher<proc_macro::bridge::server::MarkedTypes<S>> as proc_macro::bridge::server::DispatcherTrait>::dispatch
+     19799 (0.1%)     47 (0.1%)  rustc_hir::intravisit::walk_pat
+     19757 (0.1%)    180 (0.3%)  hashbrown::raw::RawTable<T>::fallible_with_capacity
+     19468 (0.1%)      1 (0.0%)  chalk_solve::clauses::program_clauses_that_could_match
+     19241 (0.1%)    160 (0.3%)  <alloc::vec::Vec<T> as core::clone::Clone>::clone
+     19220 (0.1%)    111 (0.2%)  alloc::slice::insert_head
+     19086 (0.1%)      1 (0.0%)  rustc_middle::ty::query::on_disk_cache::OnDiskCache::serialize::{{closure}}::{{closure}}
+     18407 (0.1%)      5 (0.0%)  rustc_infer::infer::canonical::query_response::<impl rustc_infer::infer::InferCtxt>::query_response_substitution
+     18332 (0.1%)     62 (0.1%)  <alloc::vec::Vec<T> as rustc_data_structures::map_in_place::MapInPlace<T>>::flat_map_in_place
+     17941 (0.1%)     69 (0.1%)  hashbrown::map::HashMap<K,V,S>::insert
+     17239 (0.1%)     39 (0.1%)  <core::iter::adapters::flatten::FlatMap<I,U,F> as core::iter::traits::iterator::Iterator>::next
+     16605 (0.1%)    117 (0.2%)  smallvec::SmallVec<A>::reserve
+     16352 (0.1%)      2 (0.0%)  rustc_mir::interpret::visitor::ValueVisitor::walk_value
+     16316 (0.1%)     14 (0.0%)  rustc_hir::intravisit::Visitor::visit_nested_item
+     15925 (0.1%)     14 (0.0%)  <rustc_ast::ast::Pat as core::clone::Clone>::clone
+     15898 (0.1%)     62 (0.1%)  rustc_serialize::serialize::Decoder::read_struct_field
+     15855 (0.1%)      9 (0.0%)  rustc_hir::intravisit::walk_item
+     15831 (0.1%)      9 (0.0%)  <&rustc_middle::ty::list::List<rustc_middle::ty::sty::ExistentialPredicate> as rustc_middle::ty::relate::Relate>::relate
+     15614 (0.1%)     96 (0.2%)  std::collections::hash::map::HashMap<K,V,S>::get
+     15599 (0.1%)      1 (0.0%)  polonius_engine::output::datafrog_opt::compute
+     15486 (0.1%)      1 (0.0%)  rustc_metadata::rmeta::encoder::EncodeContext::encode_crate_root
+     15446 (0.1%)     25 (0.0%)  rustc_middle::ty::print::pretty::FmtPrinter<F>::pretty_in_binder
+     14967 (0.1%)     27 (0.0%)  <rustc_serialize::json::Decoder as rustc_serialize::serialize::Decoder>::read_seq
+     14784 (0.1%)      6 (0.0%)  <rustc_infer::infer::nll_relate::TypeRelating<D> as rustc_middle::ty::relate::TypeRelation>::binders
+     14699 (0.1%)     52 (0.1%)  rustc_serialize::serialize::Decoder::read_enum_variant
+     14495 (0.1%)     83 (0.1%)  std::collections::hash::map::HashMap<K,V,S>::entry
+     14322 (0.1%)     52 (0.1%)  rustc_hir::intravisit::walk_where_predicate
+     14151 (0.1%)     50 (0.1%)  rustc_query_system::dep_graph::dep_node::DepNode<K>::construct
+     14078 (0.1%)      3 (0.0%)  rustc_mir::borrow_check::region_infer::RegionInferenceContext::best_blame_constraint
+     13987 (0.1%)     63 (0.1%)  rustc_hir::intravisit::walk_qpath
+     13792 (0.1%)      2 (0.0%)  <regex::re_trait::Matches<R> as core::iter::traits::iterator::Iterator>::next
+     13647 (0.1%)     46 (0.1%)  core::slice::sort::partial_insertion_sort
+     13598 (0.1%)      7 (0.0%)  alloc::collections::btree::map::BTreeMap<K,V>::remove_entry
+     13516 (0.1%)      3 (0.0%)  <rustc_infer::infer::InferCtxtBuilder as rustc_trait_selection::infer::InferCtxtBuilderExt>::enter_canonical_trait_query::{{closure}}
+     13421 (0.1%)      1 (0.0%)  rustc_ast_lowering::expr::<impl rustc_ast_lowering::LoweringContext>::lower_expr_mut::{{closure}}
+     13420 (0.1%)      2 (0.0%)  rustc_target::asm::x86::_DERIVE_rustc_serialize_Encodable_E_FOR_X86InlineAsmReg::<impl rustc_serialize::serialize::Encodable<__E> for rustc_target::asm::x86::X86InlineAsmReg>::encode::{{closure}}
+     13259 (0.1%)      1 (0.0%)  rustc_target::spec::Target::from_json
+     13158 (0.1%)      1 (0.0%)  rustc_target::asm::InlineAsmReg::overlapping_regs
+     13085 (0.1%)     63 (0.1%)  rustc_hir::intravisit::walk_generic_param
+     13069 (0.1%)      2 (0.0%)  rustc_target::abi::call::FnAbi<Ty>::adjust_for_cabi
+     13009 (0.1%)      1 (0.0%)  <rustc_mir::transform::generator::StateTransform as rustc_mir::transform::MirPass>::run_pass
+     12914 (0.1%)      2 (0.0%)  rustc_ast::ast::_DERIVE_rustc_serialize_Encodable_E_FOR_ExprKind::<impl rustc_serialize::serialize::Encodable<__E> for rustc_ast::ast::ExprKind>::encode::{{closure}}
+     12810 (0.1%)      1 (0.0%)  rustc_codegen_llvm::intrinsic::generic_simd_intrinsic
+     12316 (0.1%)      3 (0.0%)  rustc_middle::mir::_DERIVE_rustc_middle_ty_fold_TypeFoldable_tcx_FOR_Body::<impl rustc_middle::ty::fold::TypeFoldable for rustc_middle::mir::Body>::super_fold_with
+     12301 (0.1%)    140 (0.2%)  alloc::vec::Vec<T>::push
+     12287 (0.1%)     14 (0.0%)  alloc::collections::btree::map::VacantEntry<K,V>::insert
+     12277 (0.1%)      2 (0.0%)  rustc_ast::ast::_DERIVE_rustc_serialize_Decodable_D_FOR_ExprKind::<impl rustc_serialize::serialize::Decodable<__D> for rustc_ast::ast::ExprKind>::decode::{{closure}}::{{closure}}
+     12175 (0.1%)      2 (0.0%)  rustc_mir::interpret::step::<impl rustc_mir::interpret::eval_context::InterpCx<M>>::eval_rvalue_into_place
+     12120 (0.1%)      2 (0.0%)  rustc_target::asm::arm::_DERIVE_rustc_serialize_Encodable_E_FOR_ArmInlineAsmReg::<impl rustc_serialize::serialize::Encodable<__E> for rustc_target::asm::arm::ArmInlineAsmReg>::encode::{{closure}}
+     12021 (0.1%)      3 (0.0%)  rustc_typeck::astconv::generics::<impl dyn rustc_typeck::astconv::AstConv>::create_substs_for_generic_args
+     12009 (0.1%)     14 (0.0%)  <rustc_ast::ast::Ty as core::clone::Clone>::clone
+     11962 (0.1%)     42 (0.1%)  std::collections::hash::set::HashSet<T,S>::insert
+     11880 (0.1%)      8 (0.0%)  <rustc_apfloat::ieee::IeeeFloat<S> as core::fmt::Display>::fmt
+     11868 (0.1%)      6 (0.0%)  rustc_lint::early::EarlyContextAndPass<T>::with_lint_attrs
+     11844 (0.1%)     24 (0.0%)  rustc_hir::intravisit::walk_trait_item
+     11807 (0.1%)      2 (0.0%)  <rustc_mir::interpret::validity::ValidityVisitor<M> as rustc_mir::interpret::visitor::ValueVisitor<M>>::visit_value
+     11692 (0.1%)      1 (0.0%)  rustc_middle::ty::layout::LayoutCx<rustc_middle::ty::context::TyCtxt>::layout_raw_uncached
+     11475 (0.1%)      1 (0.0%)  rustc_typeck::check::method::suggest::<impl rustc_typeck::check::FnCtxt>::report_method_error
+     11397 (0.1%)      1 (0.0%)  rustc_infer::infer::lexical_region_resolve::LexicalResolver::infer_variable_values
+     11256 (0.1%)     21 (0.0%)  rustc_query_system::dep_graph::graph::CurrentDepGraph<K>::intern_node
+     11235 (0.1%)    166 (0.3%)  alloc::sync::Arc<T>::drop_slow
+     11183 (0.1%)     13 (0.0%)  rustc_ast::visit::walk_item
+     11125 (0.1%)     17 (0.0%)  rustc_middle::ty::subst::<impl rustc_middle::ty::list::List<rustc_middle::ty::subst::GenericArg>>::fill_item
+     10956 (0.1%)      1 (0.0%)  rustc_trait_selection::traits::select::confirmation::<impl rustc_trait_selection::traits::select::SelectionContext>::confirm_candidate
+     10939 (0.1%)     28 (0.0%)  rustc_middle::ty::subst::<impl rustc_middle::ty::fold::TypeFoldable for &rustc_middle::ty::list::List<rustc_middle::ty::subst::GenericArg>>::super_fold_with
+     10796 (0.1%)      1 (0.0%)  rustc_typeck::check::expr::<impl rustc_typeck::check::FnCtxt>::check_expr_kind
+     10745 (0.1%)      1 (0.0%)  rustc_mir::interpret::intrinsics::<impl rustc_mir::interpret::eval_context::InterpCx<M>>::emulate_intrinsic
+     10743 (0.1%)     60 (0.1%)  alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut,K,V,alloc::collections::btree::node::marker::Internal>,alloc::collections::btree::node::marker::Edge>::insert_fit
+     10612 (0.1%)     85 (0.1%)  rustc_middle::ty::fold::<impl rustc_middle::ty::context::TyCtxt>::replace_escaping_bound_vars::{{closure}}
+     10453 (0.1%)      1 (0.0%)  rustc_incremental::persist::fs::garbage_collect_session_directories
+     10426 (0.1%)      1 (0.0%)  rustc_infer::infer::error_reporting::<impl rustc_infer::infer::InferCtxt>::cmp
+     10386 (0.1%)      1 (0.0%)  rustc_trait_selection::traits::select::candidate_assembly::<impl rustc_trait_selection::traits::select::SelectionContext>::assemble_candidates
+     10356 (0.1%)     78 (0.1%)  rustc_data_structures::profiling::SelfProfilerRef::exec::cold_call
+     10355 (0.1%)      1 (0.0%)  <dyn rustc_typeck::astconv::AstConv>::conv_object_ty_poly_trait_ref
+     10293 (0.1%)      1 (0.0%)  rustc_mir::borrow_check::diagnostics::conflict_errors::<impl rustc_mir::borrow_check::MirBorrowckCtxt>::report_use_of_moved_or_uninitialized
+     10236 (0.1%)      4 (0.0%)  rustc_passes::stability::Annotator::annotate
+     10150 (0.1%)      1 (0.0%)  rustc_builtin_macros::format::expand_preparsed_format_args
+     10134 (0.1%)      5 (0.0%)  rustc_middle::ty::relate::super_relate_consts
+     10072 (0.1%)     10 (0.0%)  rustc_middle::query::<impl rustc_query_system::query::config::QueryDescription<rustc_middle::ty::context::TyCtxt> for rustc_middle::ty::query::queries::codegen_fn_attrs>::try_load_from_disk
+     10054 (0.1%)      2 (0.0%)  <rustc_infer::infer::InferCtxt as rustc_trait_selection::opaque_types::InferCtxtExt>::constrain_opaque_type
+     10019 (0.1%)      2 (0.0%)  <rustc_infer::infer::nll_relate::TypeRelating<D> as rustc_middle::ty::relate::TypeRelation>::tys
+      9963 (0.1%)      1 (0.0%)  rustc_mir::borrow_check::universal_regions::UniversalRegionsBuilder::build
+      9813 (0.1%)      1 (0.0%)  <rustc_mir::transform::rustc_peek::SanityCheck as rustc_mir::transform::MirPass>::run_pass
+      9789 (0.1%)     49 (0.1%)  rustc_hir::intravisit::walk_generic_args
+      9680 (0.1%)      1 (0.0%)  rustc_metadata::rmeta::encoder::EncodeContext::encode_addl_info_for_item
+      9656 (0.1%)      3 (0.0%)  rustc_infer::infer::canonical::query_response::<impl rustc_infer::infer::InferCtxt>::make_canonicalized_query_response
+      9640 (0.1%)     17 (0.0%)  rustc_middle::ty::query::stats::stats
+      9625 (0.1%)      1 (0.0%)  <rustc_target::spec::Target as rustc_serialize::json::ToJson>::to_json
+      9623 (0.1%)      2 (0.0%)  rustc_span::hygiene::HygieneEncodeContext::encode
+      9557 (0.1%)     17 (0.0%)  <alloc::vec::Vec<T> as alloc::vec::SpecFromIterNested<T,I>>::from_iter
+      9521 (0.1%)      1 (0.0%)  rustc_metadata::rmeta::encoder::EncodeContext::encode_info_for_item
+      9504 (0.1%)      7 (0.0%)  rustc_middle::ty::print::pretty::PrettyPrinter::pretty_print_const_scalar
+      9501 (0.1%)      1 (0.0%)  polonius_engine::output::naive::compute
+      9490 (0.1%)      1 (0.0%)  rustc_mir::transform::generator::locals_live_across_suspend_points
+      9467 (0.1%)      1 (0.0%)  <rustc_save_analysis::dump_visitor::DumpVisitor as rustc_hir::intravisit::Visitor>::visit_item
+      9456 (0.1%)      3 (0.0%)  rustc_typeck::check::method::probe::<impl rustc_typeck::check::FnCtxt>::probe_op
+      9451 (0.1%)      2 (0.0%)  rustc_mir::interpret::operator::<impl rustc_mir::interpret::eval_context::InterpCx<M>>::overflowing_binary_op
+      9438 (0.1%)     20 (0.0%)  rustc_ast::visit::walk_pat
+      9388 (0.1%)      8 (0.0%)  rustc_ast::mut_visit::noop_visit_expr
+      9384 (0.1%)      2 (0.0%)  rustc_middle::mir::_DERIVE_rustc_serialize_Encodable_E_FOR_StatementKind::<impl rustc_serialize::serialize::Encodable<__E> for rustc_middle::mir::StatementKind>::encode::{{closure}}
+      9220 (0.1%)      2 (0.0%)  rustc_target::asm::_DERIVE_rustc_serialize_Encodable_E_FOR_InlineAsmRegOrRegClass::<impl rustc_serialize::serialize::Encodable<__E> for rustc_target::asm::InlineAsmRegOrRegClass>::encode::{{closure}}
+      9181 (0.1%)     21 (0.0%)  rustc_query_system::dep_graph::graph::DepGraphData<K>::read_index
+      9100 (0.1%)      2 (0.0%)  rustc_middle::mir::_DERIVE_rustc_serialize_Encodable_E_FOR_Body::<impl rustc_serialize::serialize::Encodable<__E> for rustc_middle::mir::Body>::encode::{{closure}}
+      9037 (0.1%)      1 (0.0%)  rustc_middle::dep_graph::dep_node::_DERIVE_rustc_serialize_Encodable_E_FOR_DepKind::<impl rustc_serialize::serialize::Encodable<__E> for rustc_middle::dep_graph::dep_node::DepKind>::encode::{{closure}}
+      8985 (0.1%)      2 (0.0%)  rustc_expand::expand::AstFragmentKind::expect_from_annotatables
+      8958 (0.1%)      4 (0.0%)  rustc_lint::late::LateContextAndPass<T>::with_lint_attrs
+      8879 (0.1%)      6 (0.0%)  rustc_middle::ty::print::pretty::PrettyPrinter::pretty_print_dyn_existential
+      8858 (0.1%)      1 (0.0%)  rustc_lexer::<impl rustc_lexer::cursor::Cursor>::advance_token
+      8794 (0.1%)      1 (0.0%)  rustc_resolve::late::diagnostics::<impl rustc_resolve::late::LateResolutionVisitor>::smart_resolve_report_errors
+      8773 (0.1%)      1 (0.0%)  rustc_typeck::check::method::confirm::ConfirmContext::confirm
+      8740 (0.1%)      3 (0.0%)  rustc_infer::infer::combine::<impl rustc_infer::infer::InferCtxt>::super_combine_consts
+      8663 (0.1%)      2 (0.0%)  rustc_infer::infer::InferCtxtBuilder::enter_with_canonical::{{closure}}
+      8636 (0.1%)      1 (0.0%)  rustc_parse::parser::item::<impl rustc_parse::parser::Parser>::parse_item_kind
+      8603 (0.1%)      1 (0.0%)  rustc_codegen_llvm::back::lto::thin_lto
+      8586 (0.1%)      1 (0.0%)  <rustc_resolve::late::lifetimes::LifetimeContext as rustc_hir::intravisit::Visitor>::visit_ty
+      8554 (0.1%)     12 (0.0%)  alloc::slice::<impl [T]>::sort
+      8538 (0.1%)      1 (0.0%)  rustc_codegen_llvm::base::compile_codegen_unit::module_codegen
+      8512 (0.1%)      7 (0.0%)  rustc_trait_selection::traits::project::normalize_with_depth_to
+      8493 (0.1%)      1 (0.0%)  <chalk_solve::rust_ir::AssociatedTyDatum<I> as chalk_solve::clauses::program_clauses::ToProgramClauses<I>>::to_program_clauses::{{closure}}
+      8470 (0.1%)      1 (0.0%)  rustc_typeck::check::wfcheck::check_item_well_formed
+      8425 (0.0%)      1 (0.0%)  rustc_codegen_llvm::intrinsic::<impl rustc_codegen_ssa::traits::intrinsic::IntrinsicCallMethods for rustc_codegen_llvm::builder::Builder>::codegen_intrinsic_call
+      8354 (0.0%)     10 (0.0%)  std::sys_common::backtrace::__rust_begin_short_backtrace
+      8345 (0.0%)     73 (0.1%)  std::collections::hash::map::VacantEntry<K,V>::insert
+      8343 (0.0%)      9 (0.0%)  alloc::collections::btree::map::BTreeMap<K,V>::insert
+      8337 (0.0%)      1 (0.0%)  rustc_mir_build::thir::cx::expr::make_mirror_unadjusted
+      8323 (0.0%)    115 (0.2%)  core::iter::traits::iterator::Iterator::nth
+      8247 (0.0%)      1 (0.0%)  rustc_typeck::check::check_item_type
+      8242 (0.0%)      6 (0.0%)  rustc_ast::mut_visit::noop_flat_map_stmt
+      8217 (0.0%)     45 (0.1%)  rustc_hir::intravisit::walk_local
+      8206 (0.0%)      8 (0.0%)  <rustc_infer::infer::nll_relate::TypeRelating<D> as rustc_middle::ty::relate::TypeRelation>::relate_with_variance
+      8205 (0.0%)      1 (0.0%)  rustc_hir::lang_items::_DERIVE_rustc_serialize_Encodable_E_FOR_LangItem::<impl rustc_serialize::serialize::Encodable<__E> for rustc_hir::lang_items::LangItem>::encode::{{closure}}
+      8202 (0.0%)      8 (0.0%)  <rustc_infer::infer::nll_relate::TypeGeneralizer<D> as rustc_middle::ty::relate::TypeRelation>::relate_with_variance
+      8193 (0.0%)      2 (0.0%)  rustc_mir::interpret::cast::<impl rustc_mir::interpret::eval_context::InterpCx<M>>::cast
+      8161 (0.0%)      1 (0.0%)  rustc_expand::expand::MacroExpander::fully_expand_fragment
+      8147 (0.0%)      1 (0.0%)  rustc_codegen_ssa::back::link::link_natively
+      8140 (0.0%)      4 (0.0%)  rustc_codegen_ssa::back::write::start_executing_work::{{closure}}
+      8134 (0.0%)     10 (0.0%)  rustc_middle::query::<impl rustc_query_system::query::config::QueryDescription<rustc_middle::ty::context::TyCtxt> for rustc_middle::ty::query::queries::predicates_of>::try_load_from_disk
+      8090 (0.0%)      2 (0.0%)  rustc_target::asm::aarch64::_DERIVE_rustc_serialize_Encodable_E_FOR_AArch64InlineAsmReg::<impl rustc_serialize::serialize::Encodable<__E> for rustc_target::asm::aarch64::AArch64InlineAsmReg>::encode::{{closure}}
+      8080 (0.0%)      1 (0.0%)  rustc_resolve::imports::ImportResolver::finalize_import
+      8037 (0.0%)      2 (0.0%)  rustc_expand::expand::AstFragment::mut_visit_with
+      8018 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::nll::compute_regions
+      7908 (0.0%)      6 (0.0%)  rustc_infer::infer::at::At::eq
+      7899 (0.0%)     42 (0.1%)  <core::iter::adapters::flatten::FlattenCompat<I,U> as core::iter::traits::iterator::Iterator>::fold::flatten::{{closure}}
+      7883 (0.0%)      1 (0.0%)  rustc_middle::ty::context::_DERIVE_rustc_serialize_Encodable_E_FOR_TypeckResults::<impl rustc_serialize::serialize::Encodable<__E> for rustc_middle::ty::context::TypeckResults>::encode::{{closure}}
+      7877 (0.0%)     37 (0.1%)  core::slice::sort::break_patterns
+      7767 (0.0%)     38 (0.1%)  core::slice::sort::choose_pivot::{{closure}}
+      7759 (0.0%)      2 (0.0%)  rustc_mir::interpret::validity::ValidityVisitor<M>::check_safe_pointer
+      7750 (0.0%)      1 (0.0%)  rustc_typeck::check::compare_method::compare_impl_method
+      7722 (0.0%)      1 (0.0%)  rustc_trait_selection::traits::select::SelectionContext::evaluate_trait_predicate_recursively
+      7719 (0.0%)      1 (0.0%)  rustc_trait_selection::traits::fulfill::FulfillmentContext::select
+      7700 (0.0%)      2 (0.0%)  rustc_target::asm::riscv::_DERIVE_rustc_serialize_Encodable_E_FOR_RiscVInlineAsmReg::<impl rustc_serialize::serialize::Encodable<__E> for rustc_target::asm::riscv::RiscVInlineAsmReg>::encode::{{closure}}
+      7648 (0.0%)      2 (0.0%)  rustc_mir::util::graphviz::write_mir_fn_graphviz
+      7642 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::region_infer::RegionInferenceContext::solve
+      7639 (0.0%)      1 (0.0%)  <rustc_mir::transform::const_prop::ConstPropagator as rustc_middle::mir::visit::MutVisitor>::visit_statement
+      7625 (0.0%)      5 (0.0%)  rustc_middle::ty::consts::kind::ConstKind::try_eval
+      7593 (0.0%)     29 (0.0%)  <core::iter::adapters::chain::Chain<A,B> as core::iter::traits::iterator::Iterator>::next
+      7564 (0.0%)      1 (0.0%)  rustc_incremental::persist::fs::prepare_session_directory
+      7548 (0.0%)      4 (0.0%)  <A as rustc_mir::dataflow::framework::Analysis>::into_engine
+      7547 (0.0%)      1 (0.0%)  rustc_middle::ty::context::TyCtxt::create_global_ctxt
+      7527 (0.0%)     20 (0.0%)  <rustc_serialize::json::Encoder as rustc_serialize::serialize::Encoder>::emit_enum_variant
+      7524 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::diagnostics::mutability_errors::<impl rustc_mir::borrow_check::MirBorrowckCtxt>::report_mutability_error
+      7522 (0.0%)      1 (0.0%)  polonius_engine::output::Output<T>::compute
+      7513 (0.0%)     23 (0.0%)  rustc_middle::ty::fold::TypeFoldable::visit_with
+      7502 (0.0%)      1 (0.0%)  rustc_trait_selection::traits::object_safety::virtual_call_violation_for_method
+      7487 (0.0%)     11 (0.0%)  rustc_mir::dataflow::framework::graphviz::diff_pretty
+      7483 (0.0%)      1 (0.0%)  rustc_trait_selection::opaque_types::Instantiator::fold_opaque_ty
+      7471 (0.0%)     25 (0.0%)  alloc::slice::<impl [T]>::join
+      7443 (0.0%)      1 (0.0%)  rustc_trait_selection::traits::project::opt_normalize_projection_type
+      7339 (0.0%)      2 (0.0%)  chalk_solve::clauses::builder::ClauseBuilder<I>::push_binders
+      7297 (0.0%)     35 (0.1%)  core::iter::traits::iterator::Iterator::collect
+      7296 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::type_check::TypeChecker::check_rvalue
+      7263 (0.0%)      1 (0.0%)  <rustc_lint::non_ascii_idents::NonAsciiIdents as rustc_lint::passes::EarlyLintPass>::check_crate
+      7170 (0.0%)     20 (0.0%)  rustc_query_system::query::job::QueryLatch<CTX>::find_cycle_in_stack
+      7124 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::diagnostics::conflict_errors::<impl rustc_mir::borrow_check::MirBorrowckCtxt>::report_borrowed_value_does_not_live_long_enough
+      7110 (0.0%)      1 (0.0%)  rustc_middle::ty::query::try_load_from_on_disk_cache
+      7069 (0.0%)     31 (0.1%)  rustc_arena::TypedArenaChunk<T>::destroy
+      7060 (0.0%)     10 (0.0%)  rustc_middle::ty::relate::TypeRelation::relate_item_substs
+      7059 (0.0%)     41 (0.1%)  alloc::slice::<impl [T]>::to_vec
+      7052 (0.0%)     58 (0.1%)  std::sync::once::Once::call_once::{{closure}}
+      7008 (0.0%)     32 (0.1%)  tracing_core::event::Event::dispatch
+      6996 (0.0%)      1 (0.0%)  <rustc_infer::infer::InferCtxt as rustc_trait_selection::traits::error_reporting::InferCtxtExt>::report_selection_error
+      6992 (0.0%)     50 (0.1%)  rustc_hir::intravisit::walk_struct_def
+      6974 (0.0%)      1 (0.0%)  rustc_mir_build::thir::constant::parse_float
+      6973 (0.0%)     11 (0.0%)  <rustc_serialize::json::Decoder as rustc_serialize::serialize::Decoder>::read_enum_variant_arg
+      6935 (0.0%)     10 (0.0%)  rustc_middle::ty::normalize_erasing_regions::<impl rustc_middle::ty::context::TyCtxt>::normalize_erasing_regions
+      6929 (0.0%)     16 (0.0%)  <rustc_serialize::json::Encoder as rustc_serialize::serialize::Encoder>::emit_struct
+      6908 (0.0%)      1 (0.0%)  regex::re_bytes::Regex::find_at
+      6908 (0.0%)      1 (0.0%)  regex::re_unicode::Regex::find_at
+      6829 (0.0%)      4 (0.0%)  rustc_middle::query::<impl rustc_query_system::query::config::QueryDescription<rustc_middle::ty::context::TyCtxt> for rustc_middle::ty::query::queries::mir_borrowck>::try_load_from_disk
+      6783 (0.0%)      1 (0.0%)  rustc_metadata::dependency_format::calculate_type
+      6774 (0.0%)      1 (0.0%)  rustc_typeck::collect::codegen_fn_attrs
+      6766 (0.0%)      1 (0.0%)  <rustc_mir::monomorphize::partitioning::default::DefaultPartitioning as rustc_mir::monomorphize::partitioning::Partitioner>::place_root_mono_items
+      6727 (0.0%)      1 (0.0%)  <rustc_mir::transform::const_prop::ConstProp as rustc_mir::transform::MirPass>::run_pass
+      6720 (0.0%)      5 (0.0%)  <rustc_privacy::DefIdVisitorSkeleton<V> as rustc_middle::ty::fold::TypeVisitor>::visit_ty
+      6678 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::places_conflict::place_projection_conflict
+      6661 (0.0%)     19 (0.0%)  rustc_ast::visit::walk_assoc_item
+      6635 (0.0%)      1 (0.0%)  <rustc_parse_format::Parser as core::iter::traits::iterator::Iterator>::next
+      6621 (0.0%)      1 (0.0%)  rustc_typeck::check::coercion::Coerce::coerce
+      6604 (0.0%)      1 (0.0%)  rustc_resolve::late::LateResolutionVisitor::resolve_item
+      6535 (0.0%)      1 (0.0%)  rustc_typeck::collect::type_of::type_of
+      6518 (0.0%)      2 (0.0%)  rustc_data_structures::graph::scc::SccsConstruction<G,S>::walk_node
+      6512 (0.0%)      1 (0.0%)  rustc_mir_build::build::expr::into::<impl rustc_mir_build::build::Builder>::into_expr
+      6503 (0.0%)      1 (0.0%)  rustc_mir_build::build::mir_build::{{closure}}
+      6496 (0.0%)      4 (0.0%)  rustc_infer::infer::higher_ranked::<impl rustc_infer::infer::combine::CombineFields>::higher_ranked_sub
+      6481 (0.0%)     29 (0.0%)  hashbrown::map::make_hash
+      6436 (0.0%)      2 (0.0%)  rustc_infer::infer::InferCtxtBuilder::enter
+      6413 (0.0%)      1 (0.0%)  <rustc_middle::ty::context::TypeckResults as rustc_data_structures::stable_hasher::HashStable<rustc_middle::ich::hcx::StableHashingContext>>::hash_stable::{{closure}}
+      6410 (0.0%)     19 (0.0%)  <&T as rustc_data_structures::stable_hasher::HashStable<CTX>>::hash_stable
+      6362 (0.0%)      2 (0.0%)  rustc_typeck::check::typeck_with_fallback
+      6345 (0.0%)      1 (0.0%)  rustc_trait_selection::traits::select::SelectionContext::candidate_from_obligation_no_cache
+      6336 (0.0%)      1 (0.0%)  rustc_trait_selection::traits::select::confirmation::<impl rustc_trait_selection::traits::select::SelectionContext>::confirm_builtin_unsize_candidate
+      6314 (0.0%)      1 (0.0%)  rustc_codegen_ssa::mir::block::<impl rustc_codegen_ssa::mir::FunctionCx<Bx>>::codegen_call_terminator
+      6313 (0.0%)      1 (0.0%)  rustc_codegen_ssa::mir::codegen_mir
+      6280 (0.0%)     40 (0.1%)  hashbrown::raw::RawTable<T>::find_insert_slot
+      6262 (0.0%)      1 (0.0%)  chalk_engine::logic::SolveState<I,C,CO>::ensure_root_answer
+      6254 (0.0%)      3 (0.0%)  rustc_ast::ast::_DERIVE_rustc_serialize_Encodable_E_FOR_Pat::<impl rustc_serialize::serialize::Encodable<__E> for rustc_ast::ast::Pat>::encode
+      6252 (0.0%)      3 (0.0%)  rustc_middle::ty::normalize_erasing_regions::<impl rustc_middle::ty::context::TyCtxt>::normalize_erasing_late_bound_regions
+      6232 (0.0%)      1 (0.0%)  rustc_mir::transform::inline::Inliner::run_pass
+      6231 (0.0%)      1 (0.0%)  <rustc_middle::ty::query::Query as rustc_data_structures::stable_hasher::HashStable<rustc_middle::ich::hcx::StableHashingContext>>::hash_stable
+      6227 (0.0%)      8 (0.0%)  <A as rustc_mir::dataflow::framework::Analysis>::apply_statement_effect
+      6196 (0.0%)      2 (0.0%)  rustc_middle::mir::interpret::AllocDecodingSession::decode_alloc_id
+      6195 (0.0%)      4 (0.0%)  <rustc_lint::late::LateContextAndPass<T> as rustc_hir::intravisit::Visitor>::visit_item
+      6194 (0.0%)      2 (0.0%)  rustc_middle::ty::codec::encode_with_shorthand
+      6190 (0.0%)      4 (0.0%)  rustc_ast::mut_visit::noop_visit_item_kind
+      6172 (0.0%)      1 (0.0%)  rustc_codegen_ssa::base::<impl rustc_codegen_ssa::CrateInfo>::new
+      6150 (0.0%)      9 (0.0%)  rustc_parse::parser::Parser::parse_seq_to_before_tokens
+      6136 (0.0%)      2 (0.0%)  <dyn rustc_typeck::astconv::AstConv>::one_bound_for_assoc_type
+      6114 (0.0%)      8 (0.0%)  rustc_middle::ty::relate::TypeRelation::relate
+      6112 (0.0%)      2 (0.0%)  rustc_mir::util::elaborate_drops::DropCtxt<D>::elaborate_drop
+      6103 (0.0%)      1 (0.0%)  <dyn rustc_typeck::astconv::AstConv>::associated_path_to_ty
+      6096 (0.0%)      1 (0.0%)  rustc_typeck::check::check_impl_items_against_trait
+      6086 (0.0%)      1 (0.0%)  rustc_ast_lowering::item::<impl rustc_ast_lowering::LoweringContext>::lower_item_kind
+      6035 (0.0%)      1 (0.0%)  rustc_typeck::collect::explicit_predicates_of
+      6033 (0.0%)      3 (0.0%)  rustc_infer::infer::higher_ranked::<impl rustc_infer::infer::combine::CombineFields>::higher_ranked_sub::{{closure}}
+      6030 (0.0%)      6 (0.0%)  <rustc_middle::ty::print::pretty::FmtPrinter<F> as rustc_middle::ty::print::Printer>::print_def_path
+      6029 (0.0%)      1 (0.0%)  rustc_mir_build::build::matches::test::<impl rustc_mir_build::build::Builder>::perform_test
+      6023 (0.0%)      1 (0.0%)  rustc_metadata::creader::CrateLoader::maybe_resolve_crate
+      6022 (0.0%)      7 (0.0%)  datafrog::Relation<Tuple>::from_vec
+      5990 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::type_check::TypeChecker::eq_opaque_type_and_type
+      5955 (0.0%)      2 (0.0%)  rustc_middle::ty::relate::super_relate_tys
+      5936 (0.0%)      1 (0.0%)  rustc_passes::liveness::visit_fn
+      5933 (0.0%)      1 (0.0%)  rustc_typeck::check::writeback::<impl rustc_typeck::check::FnCtxt>::resolve_type_vars_in_body
+      5924 (0.0%)      1 (0.0%)  polonius_engine::output::liveness::compute_live_origins
+      5914 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::TraitDatum<I> as chalk_solve::clauses::program_clauses::ToProgramClauses<I>>::to_program_clauses::{{closure}}
+      5896 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::diagnostics::region_name::<impl rustc_mir::borrow_check::MirBorrowckCtxt>::give_region_a_name
+      5873 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::type_check::liveness::generate
+      5860 (0.0%)      1 (0.0%)  <rustc_ast_passes::feature_gate::PostExpansionVisitor as rustc_ast::visit::Visitor>::visit_item
+      5849 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::nll::dump_mir_results
+      5848 (0.0%)      1 (0.0%)  rustc_typeck::check::dropck::check_drop_impl
+      5844 (0.0%)      1 (0.0%)  rustc_mir::transform::inline::Inliner::should_inline
+      5836 (0.0%)     39 (0.1%)  <std::collections::hash::map::Iter<K,V> as core::iter::traits::iterator::Iterator>::next
+      5825 (0.0%)      1 (0.0%)  rustc_mir_build::thir::pattern::_match::is_useful
+      5824 (0.0%)      5 (0.0%)  rustc_mir::transform::check_consts::qualifs::in_operand
+      5809 (0.0%)      2 (0.0%)  rustc_mir::interpret::operand::<impl rustc_mir::interpret::eval_context::InterpCx<M>>::read_discriminant
+      5805 (0.0%)     14 (0.0%)  rustc_middle::ty::erase_regions::<impl rustc_middle::ty::context::TyCtxt>::erase_regions
+      5786 (0.0%)     73 (0.1%)  <&mut W as core::fmt::Write>::write_char
+      5786 (0.0%)      2 (0.0%)  rustc_mir::interpret::cast::<impl rustc_mir::interpret::eval_context::InterpCx<M>>::unsize_into_ptr
+      5767 (0.0%)      1 (0.0%)  rustc_typeck::check::coercion::Coerce::coerce_unsized
+      5746 (0.0%)      4 (0.0%)  rustc_typeck::check::method::suggest::<impl rustc_typeck::check::FnCtxt>::report_method_error::{{closure}}
+      5734 (0.0%)     16 (0.0%)  rustc_ast::visit::walk_ty
+      5727 (0.0%)     20 (0.0%)  rustc_query_system::dep_graph::graph::CurrentDepGraph<K>::complete_anon_task
+      5720 (0.0%)      3 (0.0%)  rustc_middle::ty::AdtDef::eval_explicit_discr
+      5716 (0.0%)     16 (0.0%)  rustc_ast::visit::walk_foreign_item
+      5709 (0.0%)      6 (0.0%)  rustc_middle::ty::print::pretty::with_no_queries::{{closure}}
+      5688 (0.0%)      1 (0.0%)  rustc_typeck::check::closure::<impl rustc_typeck::check::FnCtxt>::supplied_sig_of_closure
+      5683 (0.0%)      1 (0.0%)  <rustc_ast_lowering::item::ItemLowerer as rustc_ast::visit::Visitor>::visit_assoc_item::{{closure}}
+      5682 (0.0%)      1 (0.0%)  chalk_solve::clauses::builtin_traits::unsize::add_unsize_program_clauses
+      5654 (0.0%)      1 (0.0%)  <rustc_mir::transform::simplify_try::SimplifyArmIdentity as rustc_mir::transform::MirPass>::run_pass
+      5653 (0.0%)     15 (0.0%)  rustc_middle::query::<impl rustc_query_system::query::config::QueryDescription<rustc_middle::ty::context::TyCtxt> for rustc_middle::ty::query::queries::type_of>::try_load_from_disk
+      5643 (0.0%)      4 (0.0%)  rustc_mir::dataflow::framework::engine::Engine<A>::iterate_to_fixpoint
+      5631 (0.0%)     19 (0.0%)  rustc_serialize::serialize::Decoder::read_seq
+      5629 (0.0%)      1 (0.0%)  rustc_mir::monomorphize::polymorphize::unused_generic_params
+      5623 (0.0%)      1 (0.0%)  rustc_session::config::build_session_options
+      5621 (0.0%)      2 (0.0%)  rustc_middle::query::<impl rustc_query_system::query::config::QueryDescription<rustc_middle::ty::context::TyCtxt> for rustc_middle::ty::query::queries::specialization_graph_of>::try_load_from_disk
+      5617 (0.0%)    108 (0.2%)  <std::panicking::begin_panic::PanicPayload<A> as core::panic::BoxMeUp>::take_box
+      5611 (0.0%)      1 (0.0%)  rustc_resolve::Resolver::resolve_crate
+      5608 (0.0%)      1 (0.0%)  rustc_infer::infer::error_reporting::<impl rustc_infer::infer::InferCtxt>::note_type_err
+      5601 (0.0%)     21 (0.0%)  rustc_query_system::dep_graph::debug::DepNodeFilter::test
+      5568 (0.0%)      1 (0.0%)  <rustc_middle::traits::specialization_graph::Children as rustc_trait_selection::traits::specialize::specialization_graph::ChildrenExt>::insert
+      5566 (0.0%)     36 (0.1%)  smallvec::SmallVec<A>::push
+      5550 (0.0%)     37 (0.1%)  core::str::pattern::TwoWaySearcher::next
+      5493 (0.0%)      1 (0.0%)  chalk_engine::logic::<impl chalk_engine::forest::Forest<I,C>>::build_table
+      5488 (0.0%)      1 (0.0%)  regex_automata::minimize::Minimizer<S>::run
+      5486 (0.0%)      1 (0.0%)  rustc_resolve::build_reduced_graph::BuildReducedGraphVisitor::build_reduced_graph_for_item
+      5482 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::region_infer::RegionInferenceContext::new
+      5478 (0.0%)      3 (0.0%)  rustc_ast::ast::_DERIVE_rustc_serialize_Encodable_E_FOR_Ty::<impl rustc_serialize::serialize::Encodable<__E> for rustc_ast::ast::Ty>::encode
+      5466 (0.0%)      3 (0.0%)  <rustc_infer::infer::InferCtxt as rustc_trait_selection::traits::error_reporting::InferCtxtExt>::report_overflow_error
+      5466 (0.0%)      1 (0.0%)  rustc_middle::ty::error::<impl rustc_middle::ty::context::TyCtxt>::note_and_explain_type_err
+      5461 (0.0%)     35 (0.1%)  core::iter::traits::iterator::Iterator::try_fold
+      5451 (0.0%)      3 (0.0%)  rustc_hir::intravisit::Visitor::visit_item
+      5445 (0.0%)     55 (0.1%)  alloc::raw_vec::finish_grow
+      5390 (0.0%)     11 (0.0%)  datafrog::join::join_helper
+      5389 (0.0%)      1 (0.0%)  <rustc_mir::transform::copy_prop::CopyPropagation as rustc_mir::transform::MirPass>::run_pass
+      5375 (0.0%)     19 (0.0%)  <rustc_middle::ty::fold::<impl rustc_middle::ty::context::TyCtxt>::any_free_region_meets::RegionVisitor<F> as rustc_middle::ty::fold::TypeVisitor>::visit_ty
+      5370 (0.0%)      1 (0.0%)  rustc_infer::infer::error_reporting::nice_region_error::static_impl_trait::<impl rustc_infer::infer::error_reporting::nice_region_error::NiceRegionError>::try_report_static_impl_trait
+      5369 (0.0%)      1 (0.0%)  rustc_middle::ty::query::on_disk_cache::OnDiskCache::serialize::{{closure}}
+      5349 (0.0%)      1 (0.0%)  <rustc_hir::hir::Item as rustc_save_analysis::sig::Sig>::make
+      5344 (0.0%)      1 (0.0%)  rustc_typeck::check::demand::<impl rustc_typeck::check::FnCtxt>::emit_coerce_suggestions
+      5336 (0.0%)      1 (0.0%)  rustc_typeck::check_crate
+      5294 (0.0%)     15 (0.0%)  <rustc_query_system::query::plumbing::QueryState<CTX,C> as core::default::Default>::default
+      5292 (0.0%)      7 (0.0%)  rustc_errors::emitter::Emitter::fix_multispans_in_extern_macros
+      5280 (0.0%)      1 (0.0%)  regex::exec::ExecBuilder::build
+      5278 (0.0%)      1 (0.0%)  aho_corasick::packed::api::Builder::build
+      5269 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::type_check::TypeChecker::check_terminator
+      5263 (0.0%)      1 (0.0%)  cc::Build::try_compile
+      5241 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::region_infer::RegionInferenceContext::find_sub_region_live_at
+      5236 (0.0%)      1 (0.0%)  rustc_incremental::assert_module_sources::AssertModuleSource::check_attr
+      5231 (0.0%)     38 (0.1%)  core::slice::sort::shift_tail
+      5223 (0.0%)      1 (0.0%)  rustc_resolve::late::lifetimes::LifetimeContext::visit_segment_args
+      5219 (0.0%)      3 (0.0%)  <rustc_mir::transform::check_consts::resolver::FlowSensitiveAnalysis<Q> as rustc_mir::dataflow::framework::Analysis>::apply_terminator_effect
+      5216 (0.0%)      1 (0.0%)  rustc_typeck::check::FnCtxt::instantiate_value_path
+      5211 (0.0%)      3 (0.0%)  rustc_resolve::diagnostics::<impl rustc_resolve::Resolver>::lookup_import_candidates_from_module
+      5188 (0.0%)      1 (0.0%)  rustc_codegen_ssa::back::write::start_executing_work
+      5165 (0.0%)      1 (0.0%)  rustc_resolve::diagnostics::<impl rustc_resolve::Resolver>::into_struct_error
+      5158 (0.0%)      1 (0.0%)  rustc_driver::run_compiler
+      5155 (0.0%)      1 (0.0%)  rustc_infer::infer::error_reporting::<impl rustc_infer::infer::InferCtxt>::report_region_errors
+      5152 (0.0%)      1 (0.0%)  rustc_ast_passes::feature_gate::PostExpansionVisitor::check_abi
+      5148 (0.0%)     23 (0.0%)  <rustc_span::MultiSpan as core::clone::Clone>::clone
+      5137 (0.0%)      1 (0.0%)  rustc_mir::monomorphize::partitioning::merging::merge_codegen_units
+      5137 (0.0%)      1 (0.0%)  rustc_mir_build::build::matches::<impl rustc_mir_build::build::Builder>::bind_and_guard_matched_candidate
+      5133 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::diagnostics::conflict_errors::<impl rustc_mir::borrow_check::MirBorrowckCtxt>::annotate_argument_and_return_for_borrow
+      5113 (0.0%)     20 (0.0%)  rustc_hir::intravisit::walk_impl_item
+      5094 (0.0%)      2 (0.0%)  <rustc_ast::ast::ItemKind as core::clone::Clone>::clone
+      5063 (0.0%)      4 (0.0%)  rustc_resolve::late::LateResolutionVisitor::with_generic_param_rib
+      5047 (0.0%)      1 (0.0%)  rustc_codegen_ssa::mir::block::<impl rustc_codegen_ssa::mir::FunctionCx<Bx>>::codegen_terminator
+      5035 (0.0%)     46 (0.1%)  <alloc::vec::Vec<T> as rustc_serialize::serialize::Encodable<S>>::encode::{{closure}}
+      5014 (0.0%)      1 (0.0%)  rustc_typeck::impl_wf_check::enforce_impl_params_are_constrained
+      4992 (0.0%)      1 (0.0%)  rustc_codegen_llvm::consts::<impl rustc_codegen_llvm::context::CodegenCx>::get_static
+      4988 (0.0%)      1 (0.0%)  rustc_mir::dataflow::move_paths::builder::gather_moves
+      4984 (0.0%)      1 (0.0%)  rustc_ast_lowering::LoweringContext::lower_crate
+      4982 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::MirBorrowckCtxt::check_access_for_conflict::{{closure}}
+      4977 (0.0%)      1 (0.0%)  rustc_expand::mbe::macro_rules::generic_extension
+      4976 (0.0%)      1 (0.0%)  rustc_mir::util::spanview::write_next_viewable_with_overlaps
+      4971 (0.0%)     32 (0.1%)  rustc_hir::intravisit::walk_foreign_item
+      4963 (0.0%)      7 (0.0%)  rustc_middle::ty::codec::<impl rustc_serialize::serialize::Decodable<D> for rustc_middle::mir::Place>::decode
+      4962 (0.0%)      5 (0.0%)  rustc_infer::infer::InferCtxt::probe
+      4942 (0.0%)      1 (0.0%)  rustc_middle::ty::layout::LayoutCx<rustc_middle::ty::context::TyCtxt>::generator_layout
+      4920 (0.0%)      7 (0.0%)  rustc_middle::mir::_DERIVE_rustc_serialize_Decodable_D_FOR_UserTypeProjection::<impl rustc_serialize::serialize::Decodable<__D> for rustc_middle::mir::UserTypeProjection>::decode
+      4918 (0.0%)      1 (0.0%)  rustc_resolve::late::lifetimes::LifetimeContext::visit_fn_like_elision
+      4913 (0.0%)     13 (0.0%)  rustc_mir::dataflow::framework::graphviz::BlockFormatter<A>::write_row_with_full_state
+      4900 (0.0%)     28 (0.0%)  <alloc::vec::Vec<T> as core::iter::traits::collect::Extend<T>>::extend
+      4873 (0.0%)      1 (0.0%)  <rustc_passes::stability::Annotator as rustc_hir::intravisit::Visitor>::visit_item
+      4832 (0.0%)      1 (0.0%)  rustc_mir::interpret::terminator::<impl rustc_mir::interpret::eval_context::InterpCx<M>>::eval_fn_call
+      4812 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::type_check::type_check_internal
+      4810 (0.0%)      1 (0.0%)  rustc_typeck::check::method::probe::ProbeContext::assemble_probe
+      4808 (0.0%)      1 (0.0%)  rustc_ast_pretty::pprust::State::print_expr_outer_attr_style
+      4789 (0.0%)      1 (0.0%)  rustc_metadata::rmeta::encoder::EncodeContext::encode_impls
+      4786 (0.0%)      1 (0.0%)  rustc_codegen_ssa::_DERIVE_rustc_serialize_Decodable_D_FOR_CrateInfo::<impl rustc_serialize::serialize::Decodable<__D> for rustc_codegen_ssa::CrateInfo>::decode::{{closure}}
+      4779 (0.0%)     12 (0.0%)  rustc_lint::late::LateContextAndPass<T>::with_param_env
+      4769 (0.0%)     11 (0.0%)  rustc_serialize::serialize::Encoder::emit_struct
+      4746 (0.0%)      3 (0.0%)  rustc_ast::ast::_DERIVE_rustc_serialize_Encodable_E_FOR_Expr::<impl rustc_serialize::serialize::Encodable<__E> for rustc_ast::ast::Expr>::encode
+      4735 (0.0%)      1 (0.0%)  rustc_mir::const_eval::eval_queries::eval_body_using_ecx
+      4730 (0.0%)      1 (0.0%)  rustc_typeck::check::upvar::<impl rustc_typeck::check::FnCtxt>::analyze_closure
+      4713 (0.0%)      2 (0.0%)  rustc_infer::infer::outlives::obligations::TypeOutlives<D>::projection_must_outlive
+      4704 (0.0%)      1 (0.0%)  rustc_codegen_llvm::context::CodegenCx::declare_intrinsic
+      4693 (0.0%)      1 (0.0%)  rustc_parse::parser::expr::<impl rustc_parse::parser::Parser>::parse_bottom_expr
+      4691 (0.0%)      1 (0.0%)  rustc_codegen_llvm::back::lto::fat_lto
+      4671 (0.0%)      1 (0.0%)  rustc_infer::infer::error_reporting::<impl rustc_infer::infer::InferCtxt>::construct_generic_bound_failure
+      4661 (0.0%)      1 (0.0%)  rustc_codegen_ssa::back::symbol_export::reachable_non_generics_provider
+      4644 (0.0%)      6 (0.0%)  rustc_middle::ty::print::pretty::PrettyPrinter::pretty_print_dyn_existential::{{closure}}
+      4624 (0.0%)     21 (0.0%)  rustc_ast::visit::walk_where_predicate
+      4619 (0.0%)      1 (0.0%)  rustc_typeck::astconv::errors::<impl dyn rustc_typeck::astconv::AstConv>::complain_about_missing_associated_types
+      4618 (0.0%)      1 (0.0%)  rustc_mir::shim::build_adt_ctor
+      4613 (0.0%)      1 (0.0%)  rustc_infer::infer::region_constraints::leak_check::<impl rustc_infer::infer::region_constraints::RegionConstraintCollector>::leak_check
+      4609 (0.0%)      1 (0.0%)  rustc_typeck::check::wfcheck::check_where_clauses
+      4596 (0.0%)      5 (0.0%)  rustc_resolve::late::lifetimes::LifetimeContext::with
+      4588 (0.0%)      2 (0.0%)  rustc_mir::interpret::validity::ValidityVisitor<M>::check_wide_ptr_meta
+      4582 (0.0%)      8 (0.0%)  rustc_middle::ty::print::Printer::default_print_impl_path
+      4566 (0.0%)      3 (0.0%)  <rustc_infer::infer::InferCtxt as rustc_trait_selection::infer::InferCtxtExt>::partially_normalize_associated_types_in
+      4564 (0.0%)      1 (0.0%)  <rustc_middle::ty::context::TyCtxt::debug_stats::DebugStats as core::fmt::Debug>::fmt
+      4542 (0.0%)      2 (0.0%)  rustc_mir::interpret::place::<impl rustc_mir::interpret::eval_context::InterpCx<M>>::mplace_projection
+      4510 (0.0%)      1 (0.0%)  <rustc_mir::monomorphize::collector::RootCollector as rustc_hir::itemlikevisit::ItemLikeVisitor>::visit_item
+      4502 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::diagnostics::move_errors::<impl rustc_mir::borrow_check::MirBorrowckCtxt>::report
+      4499 (0.0%)      1 (0.0%)  <rustc_infer::infer::InferCtxt as rustc_trait_selection::traits::error_reporting::suggestions::InferCtxtExt>::maybe_note_obligation_cause_for_async_await
+      4498 (0.0%)      1 (0.0%)  rustc_builtin_macros::asm::expand_preparsed_asm
+      4494 (0.0%)      1 (0.0%)  rustc_middle::ty::layout::LayoutCx<rustc_middle::ty::context::TyCtxt>::univariant_uninterned
+      4492 (0.0%)      1 (0.0%)  rustc_resolve::late::lifetimes::resolve_lifetimes
+      4490 (0.0%)      8 (0.0%)  <rustc_ast::ast::Stmt as core::clone::Clone>::clone
+      4489 (0.0%)      1 (0.0%)  <rustc_typeck::outlives::implicit_infer::InferVisitor as rustc_hir::itemlikevisit::ItemLikeVisitor>::visit_item
+      4480 (0.0%)     11 (0.0%)  <rustc_middle::ty::sty::TypeAndMut as rustc_middle::ty::relate::Relate>::relate
+      4477 (0.0%)     37 (0.1%)  tracing_core::dispatcher::Entered::current
+      4472 (0.0%)      1 (0.0%)  rustc_infer::infer::error_reporting::nice_region_error::placeholder_error::<impl rustc_infer::infer::error_reporting::nice_region_error::NiceRegionError>::try_report_placeholders_trait
+      4464 (0.0%)      1 (0.0%)  rustc_infer::infer::error_reporting::<impl rustc_infer::infer::InferCtxt>::report_sub_sup_conflict
+      4463 (0.0%)      1 (0.0%)  rustc_trait_selection::traits::auto_trait::AutoTraitFinder::evaluate_predicates
+      4446 (0.0%)      1 (0.0%)  rustc_mir::transform::const_prop::ConstPropagator::const_prop
+      4438 (0.0%)      1 (0.0%)  rustc_metadata::locator::CrateLocator::extract_one
+      4436 (0.0%)      1 (0.0%)  rustc_ast_passes::feature_gate::check_crate
+      4429 (0.0%)      1 (0.0%)  <rustc_typeck::check::regionck::RegionCtxt as rustc_hir::intravisit::Visitor>::visit_expr
+      4410 (0.0%)      1 (0.0%)  rustc_typeck::check::wfcheck::check_trait
+      4394 (0.0%)      1 (0.0%)  rustc_mir::transform::elaborate_drops::ElaborateDropsCtxt::elaborate
+      4378 (0.0%)      1 (0.0%)  rustc_typeck::check::compare_method::compare_predicate_entailment::{{closure}}
+      4375 (0.0%)      1 (0.0%)  rustc_middle::ty::layout::<impl rustc_middle::ty::instance::Instance>::fn_sig_for_fn_abi
+      4372 (0.0%)      1 (0.0%)  rustc_mir::transform::simplify_try::optimization_applies
+      4363 (0.0%)      1 (0.0%)  rustc_typeck::check::pat::<impl rustc_typeck::check::FnCtxt>::check_struct_pat_fields
+      4361 (0.0%)      1 (0.0%)  <chalk_solve::rust_ir::OpaqueTyDatum<I> as chalk_solve::clauses::program_clauses::ToProgramClauses<I>>::to_program_clauses::{{closure}}
+      4356 (0.0%)      1 (0.0%)  chalk_engine::logic::SolveState<I,C,CO>::merge_answer_into_strand
+      4337 (0.0%)      3 (0.0%)  rustc_serialize::serialize::Encoder::emit_enum
+      4320 (0.0%)     36 (0.1%)  hashbrown::raw::RawTable<T>::iter
+      4313 (0.0%)      1 (0.0%)  rustc_infer::infer::error_reporting::<impl rustc_infer::infer::InferCtxt>::cmp_fn_sig
+      4312 (0.0%)      1 (0.0%)  rustc_mir::shim::make_shim
+      4305 (0.0%)      1 (0.0%)  rustc_passes::region::resolve_expr
+      4303 (0.0%)     29 (0.0%)  std::thread::local::fast::Key<T>::try_initialize
+      4297 (0.0%)      1 (0.0%)  regex::re_bytes::Regex::shortest_match_at
+      4297 (0.0%)      1 (0.0%)  regex::re_unicode::Regex::shortest_match_at
+      4296 (0.0%)     24 (0.0%)  <rustc_middle::ty::print::pretty::FmtPrinter<F> as rustc_middle::ty::print::pretty::PrettyPrinter>::generic_delimiters
+      4294 (0.0%)      1 (0.0%)  rustc_typeck::coherence::builtin::coerce_unsized_info
+      4291 (0.0%)      1 (0.0%)  rustc_typeck::check::method::suggest::<impl rustc_typeck::check::FnCtxt>::suggest_traits_to_import
+      4285 (0.0%)      1 (0.0%)  rustc_passes::weak_lang_items::check_crate
+      4280 (0.0%)      1 (0.0%)  rustc_middle::ty::<impl rustc_middle::ty::context::TyCtxt>::impls_are_allowed_to_overlap
+      4272 (0.0%)      1 (0.0%)  rustc_middle::ty::query::stats::print_stats
+      4246 (0.0%)     29 (0.0%)  smallvec::SmallVec<A>::try_grow
+      4240 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::region_infer::RegionInferenceContext::apply_member_constraint
+      4233 (0.0%)      1 (0.0%)  rustc_mir::transform::generator::create_generator_resume_function
+      4220 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::diagnostics::explain_borrow::<impl rustc_mir::borrow_check::MirBorrowckCtxt>::explain_why_borrow_contains_point
+      4216 (0.0%)      5 (0.0%)  <rustc_mir::dataflow::framework::fmt::DebugDiffWithAdapter<T,C> as core::fmt::Debug>::fmt
+      4189 (0.0%)      1 (0.0%)  regex::re_set::bytes::RegexSet::is_match_at
+      4176 (0.0%)      1 (0.0%)  rustc_typeck::check::op::<impl rustc_typeck::check::FnCtxt>::check_overloaded_binop
+      4175 (0.0%)      2 (0.0%)  <rustc_target::abi::call::FnAbi<&rustc_middle::ty::TyS> as rustc_middle::ty::layout::FnAbiExt<C>>::of_instance
+      4171 (0.0%)      2 (0.0%)  <rustc_ast::ptr::P<T> as rustc_serialize::serialize::Encodable<S>>::encode
+      4170 (0.0%)      2 (0.0%)  rustc_middle::mir::tcx::<impl rustc_middle::mir::Rvalue>::ty
+      4169 (0.0%)      1 (0.0%)  cc::Build::get_base_compiler
+      4167 (0.0%)      1 (0.0%)  rustc_errors::emitter::EmitterWriter::emit_message_default
+      4163 (0.0%)      7 (0.0%)  rustc_errors::emitter::Emitter::render_multispan_macro_backtrace
+      4163 (0.0%)      1 (0.0%)  rustc_mir::borrow_check::diagnostics::outlives_suggestion::OutlivesSuggestionBuilder::add_suggestion
+      4163 (0.0%)      1 (0.0%)  rustc_trait_selection::traits::codegen::codegen_fulfill_obligation
